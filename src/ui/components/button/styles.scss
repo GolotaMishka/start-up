@@ -1,0 +1,74 @@
+@import 'core';
+
+.button {
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  display: flex;
+  font-family: inherit;
+  font-size: $m;
+  justify-content: center;
+  line-height: 1;
+  min-width: 100px;
+  padding: 9px 10px;
+
+  &Primary {
+    background-color: $primary;
+    color: $white;
+
+    &:hover {
+      background-color: darken($primary, 1.2);
+    }
+
+    &:focus {
+      border-color: $text;
+    }
+
+    &:active {
+      background-color: darken($primary, 1.2);
+    }
+
+    &Icon {
+      color: $white;
+      margin-right: 5px;
+    }
+  }
+
+  &Secondary {
+    background-color: $white;
+    border: 1px solid $primary;
+    color: $primary;
+    padding: 12px 10px;
+
+    &:hover {
+      background-color: $white;
+    }
+
+    &:focus {
+      border-color: lighten($primary, 0.2);
+    }
+
+    &:active {
+      background-color: lighten($primary, 0.2);
+    }
+
+    &Icon {
+      color: $primary;
+      margin-right: 5px;
+    }
+  }
+
+  &Large {
+    font-size: $l;
+    line-height: 16px;
+    padding: 13px 22px 15px;
+  }
+
+  &:disabled,
+  &Disabled {
+    opacity: 0.4;
+    pointer-events: none !important;
+  }
+}

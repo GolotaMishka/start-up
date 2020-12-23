@@ -1,0 +1,32 @@
+{
+  "include": [
+    "src",
+    "./declaration.d.ts"
+  ],
+  "compilerOptions": {
+    "module": "es2015",
+    "target": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "removeComments": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "outDir": "dist",
+    "baseUrl": "src"
+  },
+  "paths": {
+    "ui": "src/ui",
+    "data": "src/data",
+    "app": "src/app",
+    "config": "config"
+  },
+  "exclude": [
+    "node_modules",
+    "**/dist/*",
+    "**/.storybook"
+  ]
+}

@@ -1,0 +1,13 @@
+@import 'core';
+
+.icon {
+  color: $text;
+  height: 18px;
+  pointer-events: none;
+  width: 18px;
+
+  &Disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

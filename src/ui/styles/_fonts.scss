@@ -1,0 +1,13 @@
+$primaryFont: arial;
+$secondaryFont: georgia, sans-serif;
+
+$fonts: (
+  primaryfont: $primaryFont,
+  secondaryfont: $secondaryFont,
+);
+
+:export {
+  @each $name, $font in $fonts {
+    #{$name}: $font;
+  }
+}

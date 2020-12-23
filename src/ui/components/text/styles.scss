@@ -1,0 +1,45 @@
+@import 'core';
+
+.text {
+  display: inline-block;
+}
+
+.textColor {
+  color: $black;
+
+  @each $key, $color in $colors {
+    &__#{$key} {
+      color: $color;
+    }
+  }
+}
+
+.textSize {
+  font-size: inherit;
+
+  @each $key, $size in $sizes {
+    &__#{$key} {
+      font-size: $size;
+    }
+  }
+}
+
+.textWeight {
+  font-size: inherit;
+
+  @each $key, $weight in $weights {
+    &__#{$key} {
+      font-weight: $weight;
+    }
+  }
+}
+
+.textFont {
+  font-family: $primaryFont;
+
+  @each $key, $font in $fonts {
+    &__#{$key} {
+      font-family: $font;
+    }
+  }
+}
