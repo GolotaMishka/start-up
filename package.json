@@ -5,7 +5,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "start": "cd server && npm run start",
+    "start": "node server.js",
     "start:development": "webpack-dev-server --config config/webpack.config.development.js",
     "start:staging": "cross-env PROJECT_ENV=staging npm run start",
     "start:production": "cross-env PROJECT_ENV=production npm run start",
@@ -34,7 +34,6 @@
     "hooks": {
       "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-
     }
   },
   "dependencies": {
@@ -44,11 +43,14 @@
     "classnames": "^2.2.6",
     "core-js": "^3.6.5",
     "date-fns": "^2.16.1",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
     "formik": "^2.2.5",
     "immutable": "^4.0.0-rc.12",
     "jwt-decode": "^3.1.2",
     "normalize.css": "^8.0.1",
     "normalizr": "^3.6.1",
+    "path": "^0.12.7",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-animate-height": "^2.0.23",
