@@ -8,7 +8,7 @@ const compression = require('compression');
 const appPaths = require('../config/paths');
 const sslMiddleWare = require('./ssl.middleware');
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 5000;
 const app = express();
 
 if (process.env.NODE_ENV === 'production') {
