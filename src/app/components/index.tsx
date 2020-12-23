@@ -10,7 +10,7 @@ const App: React.FC = () => {
       <Row>
         <Col>
           <Text size={Text.sizes.xxl} weight={Text.weights.semiBold} color={Text.colors.white}>
-            Fucker, mother fucker
+            Fucker, mother fucker(TEST1)
           </Text>
         </Col>
       </Row>
