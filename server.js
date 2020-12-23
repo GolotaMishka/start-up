@@ -1,12 +1,9 @@
 const express = require('express');
 const path = require('path');
-const compression = require('compression');
 const appPaths = require('./config/paths');
 
 const port = process.env.PORT || 5000;
 const app = express();
-
-app.use(compression());
 
 // app.use('/ui', express.static(uiPaths.storybook));
 
