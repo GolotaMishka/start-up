@@ -1,13 +1,18 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
-import AppComponent from 'app/components';
+import { Route, Switch } from 'react-router-dom';
+import { basePath, appPath } from 'app/constants/url';
 
-class App extends React.Component {
-  componentDidMount() {}
+import Shared from './shared';
+import App from './app';
 
-  render() {
-    return <AppComponent />;
-  }
-}
+const StartUp = () => {
+  return (
+    <Switch>
+      <Route path={appPath} component={App} />
+      <Route path={basePath} component={Shared} />
+    </Switch>
+  );
+};
 
-export default hot(App);
+export default hot(StartUp);
