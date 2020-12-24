@@ -1,0 +1,80 @@
+@import 'core';
+
+.wrapper {
+  background-color: transparent;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &Title {
+    color: $text;
+    margin-bottom: 4px;
+  }
+
+  &Field {
+    align-items: center;
+    background-color: $white;
+    display: flex;
+    width: 100%;
+
+    &Content {
+      align-items: center;
+      border: 1px solid $border;
+      border-radius: 2px;
+      color: $text;
+      display: flex;
+      font-family: $primaryFont;
+      padding: 10px 12px;
+      width: 100%;
+
+      &Icon {
+        color: $primary;
+        height: 16px;
+        width: 16px;
+
+        &Before {
+          height: 12px;
+          margin-right: 10px;
+          width: 12px;
+        }
+
+        &After {
+          margin-left: 10px;
+        }
+      }
+
+      &Input {
+        background-color: transparent;
+        border: none;
+        color: $black;
+        font-size: $m;
+        width: 100%;
+
+        &::placeholder {
+          color: $border;
+          font-family: $primaryFont;
+        }
+      }
+
+      &Error {
+        border: 1px solid $error !important;
+        color: $error;
+      }
+
+      &Disabled {
+        opacity: 0.4;
+        pointer-events: none;
+      }
+
+      &:focus-within {
+        border: 1px solid $primary;
+      }
+    }
+  }
+}
+
+.inputErrorLabel {
+  margin-top: 10px;
+}

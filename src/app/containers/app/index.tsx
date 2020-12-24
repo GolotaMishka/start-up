@@ -1,8 +1,14 @@
 import React from 'react';
-import AppComponent from 'app/components';
+import { Link } from 'react-router-dom';
+import { signUpPath } from 'app/constants/url';
 
 const AppContainer = () => {
-  return <AppComponent />;
+  return (
+    <div>
+      Home page
+      <Link to={signUpPath}>Sign up</Link>
+    </div>
+  );
 };
 
 export default AppContainer;

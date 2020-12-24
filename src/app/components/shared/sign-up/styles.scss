@@ -1,0 +1,13 @@
+@import 'core';
+
+.page {
+  background: $background;
+  height: 100vh;
+  padding: 100px;
+
+  &Form {
+    &Field {
+      margin-bottom: 20px;
+    }
+  }
+}

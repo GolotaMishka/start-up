@@ -3,6 +3,8 @@ import cx from 'classnames';
 import s from './styles.scss';
 
 import close from './icons/close.svg';
+import eye from './icons/eye.svg';
+import closedEye from './icons/closed-eye.svg';
 
 export interface IconProps extends React.SVGAttributes<SVGElement> {
   icon: any;
@@ -17,13 +19,7 @@ interface CompoundedComponent extends React.ForwardRefExoticComponent<IconProps>
 export const Icon = React.forwardRef<any, IconProps>(
   ({ icon, className, disabled, ...props }: IconProps, ref): JSX.Element => {
     return (
-      <svg
-        {...props}
-        className={cx(s.icon, className, disabled && s.iconDisabled)}
-        viewBox={icon.viewBox}
-        ref={ref}
-        {...props}
-      >
+      <svg {...props} className={cx(s.icon, className, disabled && s.iconDisabled)} viewBox={icon.viewBox} ref={ref}>
         <use xlinkHref={`#${icon.id}`} />
       </svg>
     );
@@ -32,4 +28,6 @@ export const Icon = React.forwardRef<any, IconProps>(
 
 Icon.icons = {
   close,
+  eye,
+  closedEye,
 };

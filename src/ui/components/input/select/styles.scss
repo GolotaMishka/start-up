@@ -1,0 +1,16 @@
+@import 'core';
+
+.dropDown {
+  color: $black;
+  height: 12px;
+  transition: transform 330ms ease-in-out;
+  width: 12px;
+
+  &Open {
+    transform: rotate(180deg);
+  }
+}
+
+.title {
+  margin-bottom: 4px;
+}

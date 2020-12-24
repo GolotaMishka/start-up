@@ -4,17 +4,17 @@ import { Row, Col, Text } from 'ui';
 
 import s from './styles.scss';
 
-const App: React.FC = () => {
+const SignIn: React.FC = () => {
   return (
     <div className={s.page}>
       <Row>
         <Col>
           <Text size={Text.sizes.xxl} weight={Text.weights.semiBold} color={Text.colors.white}>
-            Fucker, mother fucker(TEST1)
+            Sign - in
           </Text>
         </Col>
       </Row>
     </div>
   );
 };
-export default App;
+export default SignIn;

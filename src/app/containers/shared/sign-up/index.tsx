@@ -1,13 +1,17 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import SignUpComponent from 'app/components/shared/sign-up';
-
-// import { accountCreatedPath, authorizationPath } from 'constants/url';
-// import { Formik, Form } from 'formik';
-// import { Redirect } from 'react-router-dom';
+import SignUpComponent from 'app/components/shared/sign-up';
+import { validationSchemas } from 'data';
+import { Formik } from 'formik';
 
 const SignUpContainer = () => {
-  return <div>sign up</div>;
+  const onSubmit = async (values) => {
+    console.log(values);
+  };
+  return (
+    <Formik initialValues={{}} onSubmit={onSubmit} validationSchema={validationSchemas.TestSchema}>
+      {(formikProps) => <SignUpComponent {...formikProps} />}
+    </Formik>
+  );
 };
 
 export default SignUpContainer;

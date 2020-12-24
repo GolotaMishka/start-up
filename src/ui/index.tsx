@@ -5,3 +5,4 @@ export * from './components/grid';
 export * from './components/icon';
 export * from './components/text';
 export * from './components/loader';
+export * from './components/input';
